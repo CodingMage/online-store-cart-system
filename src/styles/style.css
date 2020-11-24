@@ -298,4 +298,110 @@ ul {
 .nav-list .active {
   color: #172530;
 }
+
+.storeproduct {
+  overflow: auto;
+  padding-top: 4%;
+}
+
+.storeproduct .productads {
+  padding: 20px;
+  background-color: #fed600;
+  width: 93%;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.storeproduct .productads-img {
+  display: unset;
+  margin-right: 50px;
+}
+
+@media (max-width: 64em) {
+  .storeproduct .productads-img {
+    display: none;
+  }
+}
+
+.storeproduct .productads-info {
+  padding: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 64em) {
+  .storeproduct .productads-info {
+    width: 100%;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.storeproduct .productads-info h1 {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+@media (min-width: 1025px) {
+  .storeproduct .productads-info h1 {
+    font-size: 55px;
+  }
+}
+
+.storeproduct .productads-info h3 {
+  font-size: 19px;
+  color: #00403d;
+}
+
+@media (min-width: 1025px) {
+  .storeproduct .productads-info h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 64em) {
+  .storeproduct .productads-info h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.storeproduct .productads-info h3 span {
+  background-color: #00403d;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 5px;
+}
 /*# sourceMappingURL=style.css.map */
