@@ -105,6 +105,11 @@
   justify-content: center;
   align-items: center;
   box-shadow: 3px 3px 14px 0 #ccc;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.06) translateZ(0);
+  }
   // position: relative;
 
   &-img {
@@ -123,7 +128,7 @@
   }
 
   &-title {
-    font-size: 18px;
+    font-size: 17px;
     text-align: center;
     margin-top: 19px;
     color: #00403d;
@@ -143,6 +148,7 @@
       background-color: #00403d;
       display: flex;
       border-radius: 50%;
+      cursor: pointer;
 
       svg {
         fill: white;

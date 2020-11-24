@@ -53,7 +53,8 @@ const ProductList = () => {
         <img src={Bag} alt="Bag" />
       </div>
       <div className="productlist-title ">
-        Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+        Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L
+        Stainless Steel
       </div>
       <div className="productlist-footer">
         <div className="footer-price">$40</div>
