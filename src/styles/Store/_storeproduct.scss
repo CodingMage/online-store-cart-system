@@ -1,6 +1,12 @@
 .storeproduct {
   overflow: auto;
   padding-top: 4%;
+  @include breakpoint-down(small) {
+    padding-top: 15px;
+  }
+  @media only screen and (max-height: 600px) {
+    padding-top: 30px;
+  }
   .productads {
     // display: none;
 

@@ -304,6 +304,18 @@ ul {
   padding-top: 4%;
 }
 
+@media (max-width: 40em) {
+  .storeproduct {
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .storeproduct {
+    padding-top: 30px;
+  }
+}
+
 .storeproduct .productads {
   padding: 20px;
   background-color: #fed600;

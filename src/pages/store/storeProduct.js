@@ -1,3 +1,4 @@
+import { Add } from "@material-ui/icons";
 import React from "react";
 import { ReactComponent as Grey } from "../../svg/shirt.svg";
 
@@ -11,12 +12,33 @@ const StoreProduct = () => {
         <div className="productads-info">
           <h1>Shop with ease</h1>
           <h3>
-            Checkout our daily deals <span>Click hear</span>{" "}
+            Checkout our daily deals <span>Click here</span>{" "}
           </h3>
         </div>
+      </div>
+
+      <div className="productlist-container">
+        <ProductList />
       </div>
     </div>
   );
 };
 
 export default StoreProduct;
+
+const ProductList = () => {
+  return (
+    <div className="productlist">
+      <div className="productlist-img"></div>
+      <div className="productlist-title">
+        Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+      </div>
+      <div className="productlist-footer">
+        <div className="footer-price">$40</div>
+        <div className="footer-add">
+          <Add />
+        </div>
+      </div>
+    </div>
+  );
+};
