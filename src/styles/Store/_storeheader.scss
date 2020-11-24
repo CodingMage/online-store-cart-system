@@ -5,6 +5,10 @@
 
   @include breakpoint-down(small) {
     padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 22;
+    background-color: #f4fcff;
   }
 
   @include breakpoint-up(small) {

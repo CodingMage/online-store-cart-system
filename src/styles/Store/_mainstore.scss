@@ -1,5 +1,10 @@
 .mainstore {
   min-height: 100vh;
+  overflow: scroll;
+
+  @include breakpoint-up(small) {
+    overflow: hidden;
+  }
 
   .storegrid {
     height: 91.8vh;

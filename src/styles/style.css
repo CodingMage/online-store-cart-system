@@ -101,6 +101,13 @@ ul {
 
 .mainstore {
   min-height: 100vh;
+  overflow: scroll;
+}
+
+@media (min-width: 640px) {
+  .mainstore {
+    overflow: hidden;
+  }
 }
 
 .mainstore .storegrid {
@@ -127,6 +134,11 @@ ul {
 @media (max-width: 40em) {
   .storeheader {
     padding: 5px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 22;
+    background-color: #f4fcff;
   }
 }
 
@@ -429,6 +441,20 @@ ul {
   padding-bottom: 40px;
 }
 
+@media (max-width: 64em) {
+  .storeproduct .productlist-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 40em) {
+  .storeproduct .productlist-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .productlist {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,7 +464,7 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: white;
-  width: 273px;
+  max-width: 273px;
   border-radius: 10px;
   padding: 12px;
   -webkit-box-pack: center;
