@@ -1,6 +1,7 @@
 import { Add } from "@material-ui/icons";
 import React from "react";
 import { ReactComponent as Grey } from "../../svg/shirt.svg";
+import Bag from "../../svg/bag.jpg";
 
 const StoreProduct = () => {
   return (
@@ -19,6 +20,25 @@ const StoreProduct = () => {
 
       <div className="productlist-container">
         <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
       </div>
     </div>
   );
@@ -29,8 +49,10 @@ export default StoreProduct;
 const ProductList = () => {
   return (
     <div className="productlist">
-      <div className="productlist-img"></div>
-      <div className="productlist-title">
+      <div className="productlist-img">
+        <img src={Bag} alt="Bag" />
+      </div>
+      <div className="productlist-title ">
         Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
       </div>
       <div className="productlist-footer">
