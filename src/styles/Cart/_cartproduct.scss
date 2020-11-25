@@ -1,0 +1,17 @@
+.cartproduct {
+  padding-top: 4%;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include breakpoint-up(small) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

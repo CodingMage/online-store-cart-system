@@ -1,0 +1,29 @@
+.cartheader {
+  @extend .storeheader;
+
+  &__content {
+    @extend .storeheader-content;
+    justify-content: space-between;
+
+    .cartlength {
+      @extend .content-cart;
+      margin-right: 0px;
+      &__icon {
+        @extend .content-cart_icon;
+      }
+      &__text {
+        @extend.content-cart_text;
+      }
+    }
+
+    .carttitle {
+      font-size: 36px;
+      color: white;
+      font-weight: 700;
+    }
+    .cartexit {
+      @extend .content-cart_icon;
+      transform: rotate(45deg);
+    }
+  }
+}

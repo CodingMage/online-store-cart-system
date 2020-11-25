@@ -10,9 +10,12 @@
     height: 91.8vh;
 
     @include breakpoint-up(small) {
-      height: 88.65vh;
       display: grid;
       grid-template-columns: 20vw 80vw;
+    }
+
+    @include breakpoint-up(large) {
+      height: 88.65vh;
     }
   }
 }

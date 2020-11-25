@@ -3,8 +3,14 @@ import CartItemList from "./CartItemList";
 
 const CartProduct = () => {
   return (
-    <div>
-      <CartItemList />
+    <div className="cartproduct">
+      <div className="cartproduct__list">
+        <CartItemList />
+        <CartItemList />
+        <CartItemList />
+        <CartItemList />
+        <CartItemList />
+      </div>
     </div>
   );
 };
