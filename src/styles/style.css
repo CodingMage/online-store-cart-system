@@ -747,6 +747,8 @@ ul {
 .itemlist__info-name {
   padding-bottom: 10px;
   color: #17544e;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .itemlist__info-price {
@@ -972,6 +974,11 @@ ul {
           align-items: center;
   border-radius: 10px;
   padding-left: 10px;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  width: 100%;
 }
 
 @media (min-width: 768px) {

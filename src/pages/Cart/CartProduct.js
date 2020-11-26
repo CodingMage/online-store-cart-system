@@ -52,7 +52,7 @@ const CartProduct = () => {
       </div>
 
       <div className="mobile-checkout">
-        <h3>Total payment $40000</h3>
+        <h3>Total payment ${total}</h3>
         <div className="mobile-actions">
           <div className="mobile-clear" onClick={clearCart}>
             Clear

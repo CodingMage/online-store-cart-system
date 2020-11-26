@@ -72,6 +72,8 @@
   &__info-name {
     padding-bottom: 10px;
     color: #17544e;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   &__info-price {
     padding-top: 10px;

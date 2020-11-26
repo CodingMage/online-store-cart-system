@@ -7,7 +7,7 @@ import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 
 const Cart = () => {
-  const { cartItems, checkout } = useContext(CartContext);
+  const { cartItems, checkout, itemCount } = useContext(CartContext);
 
   return (
     <div className="maincart">
@@ -16,6 +16,7 @@ const Cart = () => {
           <div className="cartlength flex">
             <div className="cartlength__icon">
               <ShoppingCartOutlinedIcon />
+              <div className="product-length">{itemCount}</div>
             </div>
             <div className="cartlength__text">Cart</div>
           </div>
