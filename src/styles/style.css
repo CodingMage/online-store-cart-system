@@ -9,6 +9,10 @@ html {
           box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
 *,
 *:after,
 *:before {
@@ -102,6 +106,7 @@ ul {
 .mainstore {
   min-height: 100vh;
   overflow: scroll;
+  scrollbar-width: none;
 }
 
 @media (min-width: 640px) {
@@ -127,6 +132,10 @@ ul {
   .mainstore .storegrid {
     height: 88.65vh;
   }
+}
+
+.mainstore::-webkit-scrollbar {
+  width: 0px;
 }
 
 .storeheader, .cartheader {
@@ -331,6 +340,8 @@ ul {
 .storeproduct {
   overflow: auto;
   padding-top: 4%;
+  scrollbar-color: #17544e #ffffff;
+  scrollbar-width: thin;
 }
 
 @media (max-width: 40em) {
@@ -560,6 +571,22 @@ ul {
   fill: white;
 }
 
+.storeproduct::-webkit-scrollbar {
+  width: 5px;
+}
+
+.storeproduct::-webkit-scrollbar-track {
+  background-color: #f4fcff;
+}
+
+.storeproduct::-webkit-scrollbar-thumb {
+  background-color: #17544e;
+}
+
+.storeproduct::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
 .cartheader__content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -579,6 +606,28 @@ ul {
 .cartheader__content .cartexit {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.emptycart {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #17544e;
+}
+
+.done {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #17544e;
+}
+
+.done a {
+  margin-left: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  background-color: #17544e;
 }
 
 .itemlist {
@@ -750,6 +799,8 @@ ul {
   gap: 20px;
   height: 100%;
   overflow: auto;
+  scrollbar-color: #17544e #ffffff;
+  scrollbar-width: thin;
 }
 
 @media (min-width: 768px) {
@@ -961,6 +1012,22 @@ ul {
   background-color: #17544e;
   color: white;
   cursor: pointer;
+}
+
+.cartproduct__list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.cartproduct__list::-webkit-scrollbar-track {
+  background-color: #f4fcff;
+}
+
+.cartproduct__list::-webkit-scrollbar-thumb {
+  background-color: #17544e;
+}
+
+.cartproduct__list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
 }
 
 .card {

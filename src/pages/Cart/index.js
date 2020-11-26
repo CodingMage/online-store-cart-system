@@ -7,14 +7,7 @@ import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 
 const Cart = () => {
-  const {
-    total,
-    cartItems,
-    itemCount,
-    clearCart,
-    checkout,
-    handleCheckout,
-  } = useContext(CartContext);
+  const { cartItems, checkout } = useContext(CartContext);
 
   return (
     <div className="maincart">
@@ -38,11 +31,13 @@ const Cart = () => {
       {cartItems.length > 0 ? (
         <CartProduct />
       ) : (
-        <div className="flex flex-ai-c flex-jc-c">Your cart is empty</div>
+        <div className="flex flex-ai-c flex-jc-c emptycart">
+          Your cart is empty
+        </div>
       )}
 
       {checkout && (
-        <div className="flex flex-ai-c flex-jc-c">
+        <div className="flex flex-ai-c flex-jc-c done">
           <p>Checkout successfull</p>
           <Link to="/" className="back">
             BUY MORE

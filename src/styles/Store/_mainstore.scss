@@ -1,6 +1,7 @@
 .mainstore {
   min-height: 100vh;
   overflow: scroll;
+  scrollbar-width: none;
 
   @include breakpoint-up(small) {
     overflow: hidden;
@@ -18,4 +19,9 @@
       height: 88.65vh;
     }
   }
+}
+
+.mainstore::-webkit-scrollbar {
+  width: 0px;
+  // background-color: violet;
 }
