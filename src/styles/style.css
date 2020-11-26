@@ -617,9 +617,15 @@ ul {
 
 .done {
   margin-top: 50px;
-  font-size: 30px;
+  font-size: 17px;
   font-weight: 700;
   color: #17544e;
+}
+
+@media (min-width: 640px) {
+  .done {
+    font-size: 30px;
+  }
 }
 
 .done a {
