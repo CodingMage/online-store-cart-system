@@ -5,11 +5,16 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/style.css";
 import Routes from "./routes";
+import ProductsContextProvider from "./context/ProductContext";
+import CartContextProvider from "./context/CartContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Routes />
+    <ProductsContextProvider>
+      <CartContextProvider>
+        <Routes />
+      </CartContextProvider>
+    </ProductsContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

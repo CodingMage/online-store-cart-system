@@ -1,9 +1,14 @@
 import { Add } from "@material-ui/icons";
-import React from "react";
+import React, { useContext } from "react";
 import { ReactComponent as Grey } from "../../svg/shirt.svg";
-import Bag from "../../svg/bag.jpg";
+// import Bag from "../../svg/bag.jpg";
+import { ProductsContext } from "../../context/ProductContext";
+import { CartContext } from "../../context/CartContext";
+import DoneIcon from "@material-ui/icons/Done";
 
 const StoreProduct = () => {
+  const { products } = useContext(ProductsContext);
+
   return (
     <div className="storeproduct">
       <div className="productads">
@@ -19,26 +24,9 @@ const StoreProduct = () => {
       </div>
 
       <div className="productlist-container">
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
+        {products.map((product) => (
+          <ProductList key={product.id} product={product} />
+        ))}
       </div>
     </div>
   );
@@ -46,21 +34,31 @@ const StoreProduct = () => {
 
 export default StoreProduct;
 
-const ProductList = () => {
+const ProductList = ({ product }) => {
+  const { addProduct, cartItems } = useContext(CartContext);
+
+  const isInCart = (product) => {
+    return !!cartItems.find((item) => item.id === product.id);
+  };
+
   return (
     <div className="productlist">
       <div className="productlist-img">
-        <img src={Bag} alt="Bag" />
+        <img src={product.image + "?v=" + product.id} alt="Bag" />
       </div>
-      <div className="productlist-title ">
-        Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L
-        Stainless Steel
-      </div>
+      <div className="productlist-title ">{product.title}</div>
       <div className="productlist-footer">
-        <div className="footer-price">$40</div>
-        <div className="footer-add">
-          <Add />
-        </div>
+        <div className="footer-price">${product.price}</div>
+        {isInCart(product) && (
+          <div className="footer-add">
+            <DoneIcon />
+          </div>
+        )}
+        {!isInCart(product) && (
+          <div className="footer-add" onClick={() => addProduct(product)}>
+            <Add />
+          </div>
+        )}
       </div>
     </div>
   );

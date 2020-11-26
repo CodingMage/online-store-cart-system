@@ -2,8 +2,20 @@ import React from "react";
 import CartProduct from "./CartProduct";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { Add } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
 
 const Cart = () => {
+  const {
+    total,
+    cartItems,
+    itemCount,
+    clearCart,
+    checkout,
+    handleCheckout,
+  } = useContext(CartContext);
+
   return (
     <div className="maincart">
       <div className="cartheader">
@@ -17,12 +29,26 @@ const Cart = () => {
 
           <div className="carttitle">My Cart</div>
 
-          <div className="cartexit">
+          <Link to="/" className="cartexit">
             <Add />
-          </div>
+          </Link>
         </div>
       </div>
-      <CartProduct />
+
+      {cartItems.length > 0 ? (
+        <CartProduct />
+      ) : (
+        <div className="flex flex-ai-c flex-jc-c">Your cart is empty</div>
+      )}
+
+      {checkout && (
+        <div className="flex flex-ai-c flex-jc-c">
+          <p>Checkout successfull</p>
+          <Link to="/" className="back">
+            BUY MORE
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

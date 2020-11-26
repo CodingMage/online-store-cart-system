@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 // import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+
 const StoreHeader = () => {
+  const { itemCount } = useContext(CartContext);
+
   return (
     <div className="storeheader">
       <div className="storeheader-content">
@@ -18,10 +23,13 @@ const StoreHeader = () => {
           </div>
         </div>
         <div className="content-cart flex">
-          <div className="content-cart_icon">
+          <Link to="/cart" className="content-cart_icon">
             <ShoppingCartOutlinedIcon />
-          </div>
-          <div className="content-cart_text">Cart</div>
+            <div className="product-length">{itemCount}</div>
+          </Link>
+          <Link to="/cart" className="content-cart_text">
+            Cart
+          </Link>
         </div>
         <AccountCircleOutlinedIcon className="ava" />
       </div>

@@ -1,28 +1,43 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Add, Remove } from "@material-ui/icons";
+import { CartContext } from "../../context/CartContext";
 
-import Bag from "../../svg/bag.jpg";
+// import Bag from "../../svg/bag.jpg";
 
-const CartItemList = () => {
+const CartItemList = (product) => {
+  const { increase, decrease, removeProduct } = useContext(CartContext);
+  // console.log(product);
+
   return (
     <div className="itemlist">
       <div className="itemlist__img">
-        <img src={Bag} alt="bag" />
+        <img src={product.product.image} alt={product.product.title} />
       </div>
       <div className="itemlist__info">
-        <div className="itemlist__info-name">
-          Rose Gold Plated Double Flared Tunnel Plug
-        </div>
-        <div className="itemlist__info-price">$40</div>
+        <div className="itemlist__info-name">{product.product.title}</div>
+        <div className="itemlist__info-price">${product.product.price}</div>
       </div>
       <div className="itemlist__action">
-        <div className="itemlist__action-remove">Remove</div>
+        <div
+          className="itemlist__action-remove"
+          onClick={() => removeProduct(product.product)}
+        >
+          Remove
+        </div>
         <div className="itemlist__action-change">
-          <div className="change-icon">
+          <div
+            className={
+              product.product.quantity >= 1 ? "change-icon" : "change-icon dis"
+            }
+            onClick={() => decrease(product.product)}
+          >
             <Remove />
           </div>
-          1
-          <div className="change-icon">
+          {product.product.quantity < 0 ? "0" : product.product.quantity}
+          <div
+            className="change-icon"
+            onClick={() => increase(product.product)}
+          >
             <Add />
           </div>
         </div>

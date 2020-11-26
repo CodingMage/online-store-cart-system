@@ -1,10 +1,20 @@
 .itemlist {
   background-color: white;
   padding: 15px;
-  max-width: 600px;
+  width: 92vw;
+  height: 132px;
+
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   border-radius: 12px;
+  box-shadow: 3px 3px 14px 0 #ccc;
+
+  @include breakpoint-up(medium) {
+    width: 100%;
+    max-width: 650px;
+  }
+
   &__action {
     display: flex;
     flex-direction: column;
@@ -37,6 +47,7 @@
     color: #dd2929;
     font-size: 13.5px;
     text-align: right;
+    cursor: pointer;
   }
   &__img {
     width: 71px;
@@ -67,4 +78,8 @@
     color: #17544e;
     font-weight: bold;
   }
+}
+
+.dis {
+  pointer-events: none !important;
 }

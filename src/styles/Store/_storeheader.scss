@@ -65,6 +65,7 @@
       justify-content: space-between;
       align-items: center;
       margin-right: 30px;
+      position: relative;
 
       &_icon {
         background-color: #ffffff52;
@@ -92,4 +93,18 @@
       fill: white;
     }
   }
+}
+
+.product-length {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  padding: 3px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 11px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
